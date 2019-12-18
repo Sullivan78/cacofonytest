@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="container mt-4">
+    
+        {{form_start(formArticle)}}
+
+        {{form_row(formArticle.titre)}}
+        {{form_row(formArticle.corps)}}
+        {{form_row(formArticle.auteur)}}
+        {{form_row(formArticle.categorie)}}
+        
+        <button class="btn btn-success">Valider</button>
+        {{form_end(formArticle)}}
+        
+    
+    </div>
+{% endblock %}

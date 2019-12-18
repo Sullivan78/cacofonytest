@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container mt-4">
+    
+        {{form_start(formContact)}}
+
+        {{form_row(formContact.nom)}}
+        {{form_row(formContact.prenom)}}
+        {{form_row(formContact.adresse)}}
+        {{form_row(formContact.cp)}}
+        {{form_row(formContact.ville)}}
+        {{form_row(formContact.email)}}
+        {{form_row(formContact.age)}}
+        {{form_row(formContact.photo)}}
+
+        <button class="btn btn-success">Valider</button>
+
+        {{form_end(formContact)}}
+        
+    </div>
+{% endblock %}

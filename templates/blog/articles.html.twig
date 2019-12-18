@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Articles</h1>
+    <div class="row">
+    {% for article in articles %}
+       <div class="col-3">
+            <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+                <div class="card-header">{{article.titre}} | Categorie: {{article.categorie.libelle}}</div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{article.auteur}}</h4>
+                        <p class="card-text">{{article.corps}}</p>
+                        <button type="button" class="btn btn-outline-success"><a href="{{ path("detail", {'id': article.id}) }}">Détails ici</a></button>
+                        <button type="button" class="btn btn-outline-success"><a href="{{ path("modifier", {'id': article.id}) }}">Modifier ici</a></button>
+                    </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

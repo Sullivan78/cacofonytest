@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header">Détails</div>
+    <div class="card-body">
+      <h4 class="card-title">{{article.titre}}</h4>
+      <p class="card-text">{{article.corps}}</p>
+    </div>
+  </div>
+{% endblock %}
